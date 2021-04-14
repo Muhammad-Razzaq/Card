@@ -15,7 +15,8 @@ import Grid from '@material-ui/core/Grid';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 import Photo from './../../images/FallBack.png';
-import 'bootstrap/dist/css/bootstrap.css';
+import Box from '@material-ui/core/Box';
+import Imogies from './../../images/Imogies.PNG'
 import './../../App.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     sub: {
         flexGrow: 1,
         borderRadius: 9,
-        height: 315,
+        height: 308,
         backgroundColor: "#D3D3D3",
         marginTop: "-12px",
     },
@@ -106,9 +107,9 @@ export default function RecipeReviewCard() {
                                 title="Paella dish"
                             />
                             <div className={classes.btngroup}>
-                                <ButtonGroup size="large">
-                                    <h4 style={{ fontSize: "0.9em", marginRight: "81px" }}><b>LOREM IPSUM DOLOR SIT AMET</b> <br />
-                                        <h4 style={{ fontSize: "0.9em", color: "#66635d" }}>lorem ipsum dolor</h4></h4>
+                                <ButtonGroup size="large" style={{ height: "40px" }}>
+                                    <h4 style={{ fontSize: "0.9em", marginRight: "81px", marginTop: "5px" }}><b>LOREM IPSUM DOLOR SIT AMET</b> <br />
+                                        <h4 style={{ fontSize: "0.9em", color: "#66635d", marginTop: "0" }}>lorem ipsum dolor</h4></h4>
                                     <Button variant="contained" style={{ textTransform: "capitalize", borderRadius: "3px", fontSize: "0.9em" }}>Shop Now</Button>
                                 </ButtonGroup>
                             </div>
@@ -124,9 +125,20 @@ export default function RecipeReviewCard() {
                             </ButtonGroup>
                         </div>
                     </div>
+                    <Box
+                        display="flex"
+                        alignItems="flex-start"
+                        justifyContent="space-around"
+                        css={{ height: 100 }}
+                        style={{ marginTop: "17px" }}
+                    >
+                        <Box bgcolor="white" style={{marginRight: "-35px", marginTop: "-3px"}}><img src={Imogies} alt={""} style={{width: "70px", height: "30px"}}/></Box>
+                        <Box bgcolor="white">12.0 Likes</Box>
+                        <Box bgcolor="white">4.4K Comments</Box>
+                        <Box bgcolor="white">2.4K Shares</Box>
+                    </Box>
                 </CardContent>
             </Card>
         </Grid>
-
     );
 }

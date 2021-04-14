@@ -12,14 +12,15 @@ import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Facebook from '@material-ui/icons/Facebook';
 import Grid from '@material-ui/core/Grid';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
-import Photo from './../../images/Fuel_Meter.jpg';
+import Photo from './../../images/FallBack.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import './../../App.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: 445,
+        width: 475,
         height: 900,
         borderRadius: 9
     },
@@ -40,8 +41,16 @@ const useStyles = makeStyles((theme) => ({
     sub: {
         flexGrow: 1,
         borderRadius: 9,
-        height: 285,
+        height: 315,
         backgroundColor: "#D3D3D3"
+    },
+    btngroup: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        '& > *': {
+            margin: theme.spacing(1),
+        },
     }
 }));
 
@@ -93,33 +102,23 @@ export default function RecipeReviewCard() {
                                 image={Photo}
                                 title="Paella dish"
                             />
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-8">
-                                        <h4 style={{ fontSize: "0.9em", marginTop: "10px" }}><b>LOREM IPSUM DOLOR SIT AMET</b></h4>
-                                        <h4 style={{ fontSize: "0.7em", marginTop: "-7px", color: "#66635d" }}>lorem ipsum dolor</h4>
-                                    </div>
-                                    <div className="col-4">
-                                        <Button variant="contained" style={{ textTransform: "capitalize", marginTop: "10px" }}>Shop Now</Button>
-                                    </div>
-                                </div>
+                            <div className={classes.btngroup}>
+                                <ButtonGroup size="large">
+                                    <h4 style={{ fontSize: "0.9em", marginRight: "81px" }}><b>LOREM IPSUM DOLOR SIT AMET</b> <br />
+                                        <h4 style={{ fontSize: "0.9em", color: "#66635d" }}>lorem ipsum dolor</h4></h4>
+                                    <Button variant="contained" style={{ textTransform: "capitalize", borderRadius: "3px", fontSize: "0.9em" }}>Shop Now</Button>
+                                </ButtonGroup>
                             </div>
                         </div>
-                        <div className="container">
-                            <div class="d-flex">
-                                <div class="mr-auto">
-                                    <Button style={{ textTransform: "capitalize", marginTop: "18px", backgroundColor: "#328f87", color: "white" }}>Shop Now</Button>
-                                </div>
-                                <div class="p-2">
-                                    <Button variant="contained" style={{ textTransform: "capitalize", marginTop: "10px", backgroundColor: "#22bf81", color: "white" }}>Rev Generated: $6,611,211</Button>
-                                </div>
-                            </div>
-                            <div class="d-flex" style={{ marginTop: "-15px" }}>
-                                <div class="mr-auto p-2"></div>
-                                <div class="p-2">
-                                    <Button variant="contained" style={{ textTransform: "capitalize", marginTop: "10px", backgroundColor: "#22bf81", color: "white" }}>Rev Generated: $6,611,211</Button>
-                                </div>
-                            </div>
+
+                        <div className={classes.btngroup}>
+                            <ButtonGroup size="large">
+                                <Button style={{ textTransform: "capitalize", backgroundColor: "#328f87", color: "white", marginLeft: "68px", borderRadius: "3px", fontSize: "0.9em" }}>Shop Now</Button>
+                                <Button style={{ textTransform: "capitalize", backgroundColor: "#22bf81", color: "white", marginLeft: "5px", borderRadius: "3px", fontSize: "0.9em" }}>Rev Generated: $6,611,211</Button>
+                            </ButtonGroup>
+                            <ButtonGroup size="large">
+                                <Button style={{ textTransform: "capitalize", backgroundColor: "#22bf81", color: "white", marginLeft: "186px", marginTop: "-11px", borderRadius: "3px", fontSize: "0.9em" }}>Rev Generated: $6,611,211</Button>
+                            </ButtonGroup>
                         </div>
                     </div>
                 </CardContent>

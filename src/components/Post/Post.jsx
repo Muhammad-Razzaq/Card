@@ -21,7 +21,7 @@ import './../../App.css'
 const useStyles = makeStyles((theme) => ({
     root: {
         width: 475,
-        height: 900,
+        height: 615,
         borderRadius: 9
     },
     media: {
@@ -36,13 +36,16 @@ const useStyles = makeStyles((theme) => ({
     main: {
         flexGrow: 1,
         borderRadius: 9,
-        backgroundColor: "white"
+        backgroundColor: "white",
+        border: "1px solid #D3D3D3"
+
     },
     sub: {
         flexGrow: 1,
         borderRadius: 9,
         height: 315,
-        backgroundColor: "#D3D3D3"
+        backgroundColor: "#D3D3D3",
+        marginTop: "-12px",
     },
     btngroup: {
         display: 'flex',

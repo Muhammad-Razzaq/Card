@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     main: {
         flexGrow: 1,
         borderRadius: 9,
-        backgroundColor: "pink"
+        backgroundColor: "white"
     },
     sub: {
         flexGrow: 1,
